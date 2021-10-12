@@ -1,0 +1,160 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+<link href="style.css" rel="stylesheet" type="text/css" />
+
+<script language="javascript">
+function validate()
+{
+	var fname=document.getElementById('firstname').value;
+	var lname=document.getElementById('lastname').value;
+	var pno=document.getElementById('prn').value;
+	var bname=document.getElementById('branch').value;
+	var yname=document.getElementById('year').value;
+	var rname=document.getElementById('rno').value;
+	
+	if(fname=="")
+	{
+		alert("enter firstname");
+		return false;
+	}
+	if(lname=="")
+	{
+		alert("enter lastname");
+		return false;
+	}
+	if(pno=="")
+	{
+		alert("enter prn");
+		return false;
+	}
+	if(bname=="")
+	{
+		alert("enter branch");
+		return false;
+	}
+	if(yname=="")
+	{
+		alert("enter year");
+		return false;
+	}
+	if(rname=="")
+	{
+		alert("enter roll no");
+		return false;
+	}
+	return true;
+}
+</script>
+</head>
+
+<body>
+<div class="header">
+
+<div class="headerlogo"></div>
+<div class="headername"><h1 style="text-align:center; color:#FFF;line-height:150px;">STUDENT INFORMATION MANAGEMENT SYSTEM</h1></div>
+
+</div>
+
+<!--<div class="menu"></div>-->
+
+<div class="content" >
+<!--<button onclick="document.location = 'index.html'" style="padding:10px;margin-top:5px">BACK</button>-->
+<form method="post" action="studreg.php">
+<table border="1"  align="center" style="text-align:left" cellpadding="10">
+<caption><h2>STUDENT REGISTRATION FORM</h2></caption>
+<h3 style="color:#F00">FIELDS MARKED WITH * ARE MANDATORY</h3>
+<tr>
+<th>Enter your first name *</th> 
+<td><input type="text" name="firstname" id="firstname" maxlength="15"/></td>
+<th>Enter your last name *</th>
+<td><input type="text" name="lastname" id="lastname" maxlength="15"/></td>
+</tr>
+
+<tr>
+<th>Enter your PRN *</th>
+<td><input type="text" name="prn" id="prn" maxlength="10"/></td>
+<th>Enter your email</th>
+<td><input type="email" name="email" id="email"/></td>
+</tr>
+
+
+
+<tr>
+<th>Enter your password *</th>
+<td><input type="password" name="pass" id="pass"  /></td>
+<th>Upload your photo</th>
+<td><input type="file" name="photo" id="photo" /></td>
+
+</tr>
+
+
+<tr>
+<td></td>
+<td style="color:#F00">*enter prn no as default password*</td>
+<th>Upload your resume</th>
+<td><input type="file" name="resu" id="resu" /></td>
+</tr>
+
+
+<tr>
+<th>Enter your mobile</th>
+<td><input type="number" name="mob" id="mob" maxlength="10"/></td>
+<th>Select your gender</th>
+<td>
+male<input type="radio" name="g" value="m"/>
+female<input type="radio" name="g" value="f"/>
+other<input type="radio" name="g" value="f"/>
+</td>
+</tr>
+<tr>
+<th>Enter your address</th>
+<td><textarea rows="2" cols="21.5" name="add" id="add"></textarea></td>
+<th>Select your DOB</th>
+<td><input type="date" name="dob" id="dob"/></td>
+</tr>
+<tr>
+<th>Select your branch *</th>
+<td>
+<select name="branch" id="branch" >
+<option value="" selected="selected" disabled="disabled">Select your branch</option>
+<option value="computer science">Computer science</option>
+<option value="Electrical">Electrical</option>
+<option value="Mechanical">Mechanical</option>
+<option value="Civil">Civil</option>
+</select>
+<th>Enter your city</th>
+<td><input type="text" name="city" id="city" /></td>
+</td>
+</tr>
+<tr>
+<th>Select your year *</th>
+<td>
+<select name="year" id="year" >
+<option value="" selected="selected" disabled="disabled">Select your year</option>
+<option value="FE">FE</option>
+<option value="SE">SE</option>
+<option value="TE">TE</option>
+<option value="BE">BE</option>
+</select>
+
+<th>Enter your roll no *</th>
+<td><input type="text" name="rno" id="rno" /></td>
+</tr>
+
+<tr>
+<td></td>
+<td><input type="submit" value="register"  name="submit" onclick="return validate()" style="height:40px;width:150px; background-color:#06C;color:#FFF;"/></td>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp;
+<td></td>
+<td><input type="reset" value="Reset" style="height:40px;width:150px; background-color:#06C;color:#FFF;"/></td>
+</tr>
+
+</table>
+</form>
+</div>
+
+<!--<div class="footer"></div>-->
+</body>
+</html>
